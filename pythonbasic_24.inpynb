@@ -1,0 +1,282 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "e9a99319",
+   "metadata": {},
+   "source": [
+    "def statement = in def statement we write code in more than 1 line, code can be of 4,5,6,...line.\n",
+    "\n",
+    "(2)In def statement code can be run line by line.\n",
+    "\n",
+    "lambda = In lambda function we have to writecode in one line only, not more than one."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b03d47e1",
+   "metadata": {},
+   "source": [
+    "benefits of Lambda : (i)first, is that it create our code simple .\n",
+    "\n",
+    "(ii) second, if we use lambda , we can easly understand one line code.\n",
+    "\n",
+    "(iii)third, in lambda we can write many statement in one line."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "7315f324",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l=[3,4,5,7]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "2da3c697",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def test(a):\n",
+    "    return a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "3180e92a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[3, 4, 5, 7]"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# In map all elements in list will print according to def function.\n",
+    "list(map(test, l))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "84ef9b1a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def test1(a):\n",
+    "    if a%2!=0:\n",
+    "        return a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "725b7d81",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[3, 5, 7]"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(filter(test1,l)) # In filter , element in list can be print if it verify with def function . (that if element according to def function is True then it print that element)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "52dd3b6b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from functools import reduce"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "6a481d4b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def test2(a,b):\n",
+    "    return a+b    # reduce, we have to take two variable in function , not more than two , or not one variable."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "adf996c8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "19"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "reduce(test2,l)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b4e5de6a",
+   "metadata": {},
+   "source": [
+    "Guidlines For Coding:\n",
+    "    (i)We have to write code in such a way so that it become easy to undrstand.\n",
+    "    \n",
+    "    (ii)when we write code , we should use easy variable .\n",
+    "    \n",
+    "    (iii)During writing a code we should go through line by line , so that no error will come during run time."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ca8c514a",
+   "metadata": {},
+   "source": [
+    "Three or more ways that functions can communicate results to a caller Functions can send back results with return statements, by changing passed-in mutable arguments, and by setting global variables."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "805148ec",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Recursion= Recursion simply means when we call function itself again and again.\n",
+    "\n",
+    "\n",
+    " \n",
+    "   "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0f1259aa",
+   "metadata": {},
+   "source": [
+    "Annotations are expressions associated with various part of function.\n",
+    "\n",
+    "   syntax: def test(a:expression, b: expression)\n",
+    "   "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "id": "bf9fe290",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (4263055676.py, line 1)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;36m  Cell \u001b[1;32mIn[48], line 1\u001b[1;36m\u001b[0m\n\u001b[1;33m    def test(a:,b:5):\u001b[0m\n\u001b[1;37m               ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "def test(a:,b:5):\n",
+    "    return test"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "b236fdf5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<function __main__.test(a: 'int', b: 5)>"
+      ]
+     },
+     "execution_count": 45,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "test"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "ad21ff18",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'b' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[47], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m \u001b[43mb\u001b[49m\n",
+      "\u001b[1;31mNameError\u001b[0m: name 'b' is not defined"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "87382d0f",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
