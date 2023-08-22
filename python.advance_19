@@ -1,0 +1,245 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "16c17664",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class car:\n",
+    "    def __init__(self,a,b,c):                 #In this  class is bluprint of objects(instances),and it also show structure,behaviour of all objects of class\n",
+    "        self.a=a\n",
+    "        self.b=b\n",
+    "        self.c=c\n",
+    "        \n",
+    "        def test(self):\n",
+    "            print(\"this is test function\")\n",
+    "        def test2(self):\n",
+    "            print(\"this is test1 function\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "1d16a8b6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "car1=car(12,34,22) \n",
+    "car2=car(32,43,21)# there car1 is instance of class objects"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "c09fb1bc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "34"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "car1.b"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4ffc50f9",
+   "metadata": {},
+   "source": [
+    "Answer(2)Data of instances depend on instanc variables ,because every instances have its own unique variables"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "14c9a7ac",
+   "metadata": {},
+   "source": [
+    "Knowledge stored in class:\n",
+    "    (1)Class is bluprint of objects,showing behaviour,struture of objects.\n",
+    "    (2)Class help in creating inheritance which help in calling function from another function.\n",
+    "    (3)class store encaptulation (public,private,protected)\n",
+    "    (4)class store proliphism in which different classes contain same type of information.\n",
+    "    (5)overriding.\n",
+    "    (6)overloading."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "29008975",
+   "metadata": {},
+   "source": [
+    "Methods are related to class, its objects,instances.\n",
+    "regular function not related to any class, or its attributes."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "e8fa2c16",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class car:\n",
+    "    def  __init__(self,a,b,c):\n",
+    "        self.a=a\n",
+    "        self.b=b\n",
+    "        self.c=c\n",
+    "        \n",
+    "    def test(self) :\n",
+    "        print('this is test function')\n",
+    "        \n",
+    "# In this code method of class car is a,b,c,test."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "1d078182",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def test2(n):\n",
+    "    print(\"this  is  regular function\")\n",
+    "  # in this code test2 is regular function which is not associated with class car.  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "e5ec28ef",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#yes inheritance it is supported in python .\n",
+    "class car:\n",
+    "    def  __init__(self,a,b,c):\n",
+    "        self.a=a\n",
+    "        self.b=b\n",
+    "        self.c=c\n",
+    "        \n",
+    "    def test(self) :\n",
+    "        print('this is test function')\n",
+    "        \n",
+    "class car1(car):\n",
+    "    \n",
+    "     def test2(self):\n",
+    "            print(\"this is test2 function\")\n",
+    "            \n",
+    "            "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "31e86b58",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=car(1,2,3)\n",
+    "b=car1(4,5,6)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "07d1af9a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class car:\n",
+    "    def  __init__(self,a):\n",
+    "        self._a=a\n",
+    "        \n",
+    "    def test(self) :\n",
+    "        print('this is test function')\n",
+    "        \n",
+    "        \n",
+    "        # private (._)\n",
+    "  \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "9cd95f89",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "n=car(2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "d2e07d49",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n._a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3bc67cf8",
+   "metadata": {},
+   "source": [
+    "Class variable shared among all instances.\n",
+    "instance variable are unique for there own instances."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a397b001",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Self used in class,which is very important.\n",
+    "Self,contain variable of class,and it show instances attributes.\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
